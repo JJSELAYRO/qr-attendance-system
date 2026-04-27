@@ -11,6 +11,11 @@ jobs:
   build-apk:
     runs-on: ubuntu-latest
     
+    env:
+      ANDROID_SDK_HOME: /home/runner/.buildozer/android/platform/android-sdk
+      ANDROID_HOME: /home/runner/.buildozer/android/platform/android-sdk
+      ANDROID_SDK_ROOT: /home/runner/.buildozer/android/platform/android-sdk
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -39,6 +44,10 @@ jobs:
     - name: Build APK
       working-directory: ./frontend
       run: |
+        # Accept SDK licenses automatically
+        mkdir -p ~/.android
+        yes | buildozer android debug || true
+        # Retry if first attempt fails
         buildozer android debug
         
     - name: Upload APK as artifact
