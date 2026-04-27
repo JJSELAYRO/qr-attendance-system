@@ -141,64 +141,23 @@ android.logcat_filters = *:S python:D
 # (bool) Copy library instead of making a libpymodules.so
 android.copy_libs = 1
 
-# (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
-android.arch = arm64-v8a
-
 # (int) overrides automatic versionCode computation
 android.numeric_version = 1
 
 # (bool) enables Android auto backup feature (Android API >=23)
 android.allow_backup = True
 
-# (str) XML file for custom backup rules (see official auto backup documentation)
-# android.backup_rules =
-
-# (str) If you need to insert variables into your AndroidManifest.xml file,
-# you can do so with the manifest_placeholders property.
-# This property takes a map of key-value pairs. (via a string)
-# Usage example : android.manifest_placeholders = [myCustomUrl:\"org.example.custom/url\", \n#                                                  otherPlaceholder: \"value\"
-# android.manifest_placeholders = [:]
-
 # (bool) Skip byte compile for .py files
 # android.no-byte-compile-python = False
 
 # (str) The format used to package the app for release mode (aab or apk or aar).
-# android.release_artifact = aab
+android.release_artifact = apk
 
 # (str) The format used to package the app for debug mode (apk or aar).
-# android.debug_artifact = apk
-
-# (str) Android entry point
-android.entrypoint = org.kivy.android.PythonActivity
-
-# (str) Full name including package path of the Java class that implements Python Activity
-# Use that parameter if you want to implement your own PythonActivity class (e.g. for notification support)
-# android.apptheme = "@android:style/Theme.NoTitleBar"
-
-# (str) XML file to include as an intent filters in <activity> tag
-#android.manifest_intent_filters =
-
-# (list) Pattern to whitelist for the whole project
-#android.whitelist =
+android.debug_artifact = apk
 
 # (bool) Apply Java classes transformation to support lambda (default True if android.minapi >= 24)
 android.enable_androidx = True
-
-# (list) Additionnal Java .jar files to add to the libs
-#android.add_jars = foo.jar,bar.jar,path/to/more/*.jar
-
-# (list) Additionnal Java directories to add to the libs
-#android.add_src =
-
-# (str) additional Java classes to add (example: com.example.MyClass)
-#android.add_src = com/example/MyClass.java
-
-# (list) Gradle dependencies to add (currently works only with sdl2_gradle bootstrap)
-#android.gradle_dependencies = com.android.support:support-compat:28.0.0
-
-# (list) add java compile options
-# this can for example be necessary when you want to use android.car.Car
-#android.add_compile_options = sourceCompatibility JavaVersion.VERSION_1_8, targetCompatibility JavaVersion.VERSION_1_8
 
 # (list) Packaging options to add 
 # see https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.PackagingOptions.html
