@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+
+<!-- SMS Intent Filter -->
+<intent-filter>
+    <action android:name="android.intent.action.SENDTO" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data android:scheme="sms" />
+    <data android:scheme="smsto" />
+</intent-filter>

@@ -1,0 +1,28 @@
+# QR Attendance System Requirements
+# Backend + Frontend dependencies
+
+# ============== Backend (FastAPI) ==============
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+sqlalchemy==2.0.23
+pydantic==2.5.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# ============== Frontend (Kivy + KivyMD) ==============
+kivy==2.2.1
+kivymd==1.1.1
+plyer==2.1.0  # For GPS and other device features
+pyjnius==1.6.1  # For Android Java interface
+zbarcam==2023.1.1  # For QR code scanning
+pillow==10.1.0  # Image processing
+numpy==1.26.2  # Required for camera processing
+opencv-python==4.8.1.78  # Alternative QR scanning
+
+# ============== Build Tools ==============
+buildozer==1.5.0  # For Android APK building
+cython==3.0.6  # Required for building
+
+# ============== Development ==============
+requests==2.31.0  # HTTP client
+python-dateutil==2.8.2

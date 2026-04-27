@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# Buildozer
+.buildozer/
+bin/
+*.apk
+*.aab
+*.ipa
+
+# Android
+*.keystore
+*.jks
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Google Drive credentials (keep these secret!)
+client_secret.json
+token.pickle
+credentials.json
+
+# Test files
+test.db
+qr_attendance.db
