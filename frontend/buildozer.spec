@@ -13,7 +13,7 @@ package.name = qrattendance
 package.domain = org.school.attendance
 
 # Source code where the main.py live
-source.dir = frontend
+source.dir = .
 
 # Source files to include
 source.include_exts = py,png,jpg,kv,atlas,ttf,json,txt
