@@ -27,7 +27,7 @@ jobs:
         pip3 install buildozer cython
         
     - name: Cache buildozer dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: |
           ~/.buildozer
@@ -45,14 +45,14 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: qr-attendance-apk
-        path: frontend/bin/*.apk
+        path: bin/*.apk
         retention-days: 30
         
     - name: Create Release
       if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
       uses: softprops/action-gh-release@v1
       with:
-        files: frontend/bin/*.apk
+        files: bin/*.apk
         tag_name: v${{ github.run_number }}
         name: QR Attendance v${{ github.run_number }}
         body: |
